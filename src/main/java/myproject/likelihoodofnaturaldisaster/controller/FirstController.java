@@ -31,6 +31,7 @@ public class FirstController {
         ForecastIO fio = new ForecastIO("321454184d08ad9ad1910cf541bab553");
         model.addAttribute("fio", fio.getForecast("49.980151", "36.349186"));
 
+
         return "testApp";
     }
 
