@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Probability of an avalanche</title>
+    <title>Probability tornado</title>
 
     <style type="text/css">
         .middle-page {
@@ -27,7 +27,7 @@
         .jumbotron {
             padding: 2rem 1rem;
             margin-bottom: 2rem;
-            background-color: rgba(34, 112, 214, 0.53);
+            background-color: rgba(104, 104, 113, 0.81);
             border-radius: .3rem;
         }
 
@@ -41,21 +41,17 @@
             color: #a53933 !important;
         }
     </style>
-
-
 </head>
 <body>
 
 <div class="container">
     <div class="jumbotron">
         <div class="container">
-            <h1 class="display-4 text-center text-danger">High probability of an avalanche</h1>
-            <p class="display-3 lead text-center text-info font-weight-bold ">Be careful!</p>
+            <h1 class="display-4 text-center text-danger">There is a chance of a tornado in this geolocation</h1>
+            <p class="display-4 lead text-center text-info font-weight-bold ">Be careful!</p>
         </div>
     </div>
-
 </div>
-
 
 <div class="container middle-page">
     <div class="row">
@@ -64,7 +60,6 @@
                 Back
             </button>
         </div>
-
     </div>
 </div>
 

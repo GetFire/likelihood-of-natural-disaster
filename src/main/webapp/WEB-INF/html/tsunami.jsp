@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Today is a good weather</title>
+    <title>Tsunami</title>
 
     <style type="text/css">
         .middle-page {
@@ -27,11 +27,20 @@
         .jumbotron {
             padding: 2rem 1rem;
             margin-bottom: 2rem;
-            background-color: #28a7455e;
+            background-color: rgba(44, 61, 151, 0.96);
             border-radius: .3rem;
         }
-    </style>
 
+        .text-danger {
+            color: #fafbff !important;
+        }
+
+        .text-info {
+            font-family: "Arial Narrow";
+
+            color: #a5241f !important;
+        }
+    </style>
 
 </head>
 <body>
@@ -39,12 +48,12 @@
 <div class="container">
     <div class="jumbotron">
         <div class="container">
-            <h1 class="display-4 text-center text-success">Today is a good weather</h1>
+            <h1 class="display-4 text-center text-danger">There is a chance of a tsunami in this location.</h1>
+            <p class="display-3 lead text-center text-info font-weight-bold ">Be careful!</p>
         </div>
     </div>
 
 </div>
-
 
 <div class="container middle-page">
     <div class="row">
@@ -53,7 +62,6 @@
                 Back
             </button>
         </div>
-
     </div>
 </div>
 

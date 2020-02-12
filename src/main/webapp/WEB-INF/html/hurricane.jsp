@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Probability tornado</title>
+    <title>Possible hurricane</title>
 
     <style type="text/css">
         .middle-page {
@@ -27,30 +27,23 @@
         .jumbotron {
             padding: 2rem 1rem;
             margin-bottom: 2rem;
-            background-color: rgba(104, 104, 113, 0.81);
+            background-color: #a70f1473;
             border-radius: .3rem;
         }
 
-        .text-danger {
-            color: #fafbff !important;
-        }
-
-        .text-info {
+        .text-center {
             font-family: "Arial Narrow";
-
-            color: #a53933 !important;
+            color: #d81120;
         }
     </style>
-
-
 </head>
 <body>
 
 <div class="container">
     <div class="jumbotron">
         <div class="container">
-            <h1 class="display-4 text-center text-danger">There is a chance of a tornado in this geolocation</h1>
-            <p class="display-4 lead text-center text-info font-weight-bold ">Be careful!</p>
+            <h1 class="display-4 text-center text-danger">Hurricane is waiting for you</h1>
+            <p class="display-2 lead text-center font-weight-bold">Be careful!</p>
         </div>
     </div>
 
