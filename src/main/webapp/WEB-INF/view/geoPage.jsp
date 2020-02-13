@@ -1,17 +1,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
 <html>
 <head>
     <title>GeoPage</title>
 </head>
 <body>
-
-<c:if test="${not empty geoForm.latitude}">
-    <h1>latitude: ${geoForm.latitude}</h1>
-    <h1>longitude:${geoForm.longitude}</h1>
-</c:if>
 
 <h1>
     <button onclick="getGetAndSubmitForm()">Get your forecast</button>
@@ -28,10 +24,21 @@
     <form:input id="longitude" path="longitude" type="hidden" value="${geoForm.longitude}"/>
 </form:form>
 
-<div>
-    ${forecast}
-    <div>${forecast.getTimezone}</div>
-</div>
+<c:if test="${not empty forecast}">
+    <div>
+            ${forecast}
+        <div><spring:message code="timezone" arguments="${forecast.timezone}"/> </div>
+        <div><spring:message code="time" arguments="${forecast.time}"/> </div>
+        <div><spring:message code="icon" arguments="${forecast.icon}"/> </div>
+        <div><spring:message code="summary" arguments="${forecast.summary}"/> </div>
+        <div>${forecast.cloudCover}</div>
+        <div>${forecast.humidity}</div>
+        <div>${forecast.nearestStormDistance}</div>
+        <div>${forecast.windSpeed}</div>
+    </div>
+</c:if>
+
+
 
 
 <%--<button onclick="getGetAndSubmitForm()">get geo</button>--%>

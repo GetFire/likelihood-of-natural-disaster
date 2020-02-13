@@ -7,20 +7,20 @@ public class AlexeyForecastDto {
     private String sunriseTime;
     private String sunsetTime;
     private String icon;
-    private String getTimezone;
+    private String timezone;
     private String temperatureMinTime;
     private String temperatureMaxTime;
     private String precipType;
     private String apparentTemperatureMinTime;
     private String apparentTemperatureMaxTime;
-    private String precipIntensity;
-    private String cloudCover;
-    private String humidity;
-    private String nearestStormDistance;
-    private String precipAccumulation;
-    private String pressure;
-    private String visibility;
-    private String windSpeed;
+    private Double precipIntensity;
+    private Double cloudCover;
+    private Double humidity;
+    private Double nearestStormDistance;
+    private Double precipAccumulation;
+    private Double pressure;
+    private Double visibility;
+    private Double windSpeed;
 
 
     public String getTime() {
@@ -63,12 +63,12 @@ public class AlexeyForecastDto {
         this.icon = icon;
     }
 
-    public String getGetTimezone() {
-        return getTimezone;
+    public String getTimezone() {
+        return timezone;
     }
 
-    public void setGetTimezone(String getTimezone) {
-        this.getTimezone = getTimezone;
+    public void setTimezone(String timezone) {
+        this.timezone = timezone;
     }
 
     public String getTemperatureMinTime() {
@@ -111,67 +111,67 @@ public class AlexeyForecastDto {
         this.apparentTemperatureMaxTime = apparentTemperatureMaxTime;
     }
 
-    public String getPrecipIntensity() {
+    public Double getPrecipIntensity() {
         return precipIntensity;
     }
 
-    public void setPrecipIntensity(String precipIntensity) {
+    public void setPrecipIntensity(Double precipIntensity) {
         this.precipIntensity = precipIntensity;
     }
 
-    public String getCloudCover() {
+    public Double getCloudCover() {
         return cloudCover;
     }
 
-    public void setCloudCover(String cloudCover) {
+    public void setCloudCover(Double cloudCover) {
         this.cloudCover = cloudCover;
     }
 
-    public String getHumidity() {
+    public Double getHumidity() {
         return humidity;
     }
 
-    public void setHumidity(String humidity) {
+    public void setHumidity(Double humidity) {
         this.humidity = humidity;
     }
 
-    public String getNearestStormDistance() {
+    public Double getNearestStormDistance() {
         return nearestStormDistance;
     }
 
-    public void setNearestStormDistance(String nearestStormDistance) {
+    public void setNearestStormDistance(Double nearestStormDistance) {
         this.nearestStormDistance = nearestStormDistance;
     }
 
-    public String getPrecipAccumulation() {
+    public Double getPrecipAccumulation() {
         return precipAccumulation;
     }
 
-    public void setPrecipAccumulation(String precipAccumulation) {
+    public void setPrecipAccumulation(Double precipAccumulation) {
         this.precipAccumulation = precipAccumulation;
     }
 
-    public String getPressure() {
+    public Double getPressure() {
         return pressure;
     }
 
-    public void setPressure(String pressure) {
+    public void setPressure(Double pressure) {
         this.pressure = pressure;
     }
 
-    public String getVisibility() {
+    public Double getVisibility() {
         return visibility;
     }
 
-    public void setVisibility(String visibility) {
+    public void setVisibility(Double visibility) {
         this.visibility = visibility;
     }
 
-    public String getWindSpeed() {
+    public Double getWindSpeed() {
         return windSpeed;
     }
 
-    public void setWindSpeed(String windSpeed) {
+    public void setWindSpeed(Double windSpeed) {
         this.windSpeed = windSpeed;
     }
 }

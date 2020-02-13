@@ -46,9 +46,7 @@ public class GeoController {
 
         FIODataPoint today = new FIODaily(fio).getDay(1);
 
-//        AlexeyDtoMapper mapper = Mappers.getMapper(AlexeyDtoMapper.class);
-
-        AlexeyForecastDto result = mapper.sourceToDestination(today);
+        AlexeyForecastDto result = mapper.map(today);
 
         model.addAttribute("forecast", result);
 
