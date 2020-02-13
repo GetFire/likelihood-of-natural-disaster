@@ -93,4 +93,5 @@
         prompt(window,
             "extensions.foo-addon.allowGeolocation",
             "Foo Add-on wants to know your location.",
-            function callback(allowed) { alert(allowed); })
+            function callback(allowed) { alert(allowed); });
+</script>

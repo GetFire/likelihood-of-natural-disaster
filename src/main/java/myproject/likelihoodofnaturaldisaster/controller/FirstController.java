@@ -5,23 +5,26 @@ import com.eclipsesource.json.JsonObject;
 import com.github.dvdme.ForecastIOLib.FIODaily;
 import com.github.dvdme.ForecastIOLib.FIODataPoint;
 import com.github.dvdme.ForecastIOLib.ForecastIO;
+import myproject.likelihoodofnaturaldisaster.dto.GeoForm;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.List;
 
 
 @Controller
+@RequestMapping("/")
 public class FirstController {
 
-    @RequestMapping("/")
-    public String home() {
+    @GetMapping
+    public String home(@RequestParam(required = false, defaultValue = "Hello")String message, Model model) {
+        model.addAttribute("name", message);
         return "hello";
     }
 
