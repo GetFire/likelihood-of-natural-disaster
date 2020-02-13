@@ -8,7 +8,7 @@ import java.util.List;
 
 public class ForecastMapper {
 
-    public List<Forecast> mapList(List<Forecast> forecastList) {
+    public List<ForecastDto> mapList(List<Forecast> forecastList) {
         List<ForecastDto> result = new ArrayList<>(forecastList.size());
         for (Forecast forecast : forecastList) {
             ForecastDto toAdd = new ForecastDto();

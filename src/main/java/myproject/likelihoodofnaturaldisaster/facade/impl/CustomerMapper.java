@@ -11,7 +11,7 @@ public class CustomerMapper {
         CustomerDto target = new CustomerDto();
         target.setLogin(source.getLogin());
         target.setName(source.getName());
-        target.setForecastList(forecastMapper.mapList(source.getForecastList()));
+//        target.setForecastList(forecastMapper.mapList(source.getForecastList()));
         return target;
     }
 }

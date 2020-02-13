@@ -19,14 +19,14 @@ import java.util.List;
 
 @Controller
 public class FirstController {
-    HttpServletRequest request;
+
     @RequestMapping("/")
     public String home() {
         return "hello";
     }
 
     @RequestMapping("/home")
-    public String pageWithForm(){
+    public String pageWithForm() {
         return "welcome";
     }
 
@@ -36,19 +36,22 @@ public class FirstController {
 
         return "hell";
     }
-    @RequestMapping(value = "redirect",method = RequestMethod.GET)
-    public String displayWeather (){
-        return "redirect:hell";
+
+    //    @RequestMapping(value = "redirect",method = RequestMethod.GET)
+//    public String displayWeather (){
+//        return "redirect:hell";
+//    }
+    @RequestMapping("/getgeo")
+    public String getGeolocation(Model model) {
+        model.addAttribute("geo",getGeolocation(model));
+        return "geolocation";
     }
 
     private List<String> weather() {
-
-        String a = request.getParameter("first");
-        String b = request.getParameter("second");
         ForecastIO fio = new ForecastIO("321454184d08ad9ad1910cf541bab553");
         fio.setUnits(ForecastIO.UNITS_SI);
         fio.setLang(ForecastIO.LANG_ENGLISH);
-        fio.getForecast(a,b);
+        fio.getForecast("49.980151", "36.349186");
         JsonObject js = fio.getDaily();
 
         FIODataPoint today = new FIODaily(fio).getDay(1);
@@ -60,25 +63,24 @@ public class FirstController {
         weather.add("Sun set: " + today.sunsetTime());
         weather.add("Icon: " + today.icon());
 
-        weather.add("getTimezone: "+today.getTimezone());
-        weather.add("temperature min time: "+today.temperatureMinTime());
-        weather.add("temperature Max Time: "+today.temperatureMaxTime());
-        weather.add("precip type: "+today.precipType());
-        weather.add("apparent Temperature Min Time: "+today.apparentTemperatureMinTime());
-        weather.add("apparent Temperature Max Time: "+today.apparentTemperatureMaxTime());
-        weather.add("precip Intensity: "+today.precipIntensity());
-        weather.add("cloud Cover: "+today.cloudCover());
-        weather.add("humidity: "+today.humidity());
-        weather.add("nearest Storm Distance: "+today.nearestStormDistance());
-        weather.add("precip Accumulation: "+today.precipAccumulation());
-        weather.add("pressure: "+today.pressure());
-        weather.add("Visibility: "+today.visibility());
-        weather.add("Wind speed: "+today.windSpeed());
+        weather.add("getTimezone: " + today.getTimezone());
+        weather.add("temperature min time: " + today.temperatureMinTime());
+        weather.add("temperature Max Time: " + today.temperatureMaxTime());
+        weather.add("precip type: " + today.precipType());
+        weather.add("apparent Temperature Min Time: " + today.apparentTemperatureMinTime());
+        weather.add("apparent Temperature Max Time: " + today.apparentTemperatureMaxTime());
+        weather.add("precip Intensity: " + today.precipIntensity());
+        weather.add("cloud Cover: " + today.cloudCover());
+        weather.add("humidity: " + today.humidity());
+        weather.add("nearest Storm Distance: " + today.nearestStormDistance());
+        weather.add("precip Accumulation: " + today.precipAccumulation());
+        weather.add("pressure: " + today.pressure());
+        weather.add("Visibility: " + today.visibility());
+        weather.add("Wind speed: " + today.windSpeed());
         return weather;
     }
 
 }
-
 
 
 //    PrintWriter printWriter = new PrintWriter(System.out);

@@ -9,9 +9,7 @@ public class CustomerModel {
     private String login;
     private List<Forecast> forecastList;
 
-    public CustomerModel(String id){
-        super(id);
-    }
+
 
     public String getName() {
         return name;

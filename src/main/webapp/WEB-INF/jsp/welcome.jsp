@@ -9,6 +9,9 @@
     <br/>
     Second: <input type="text" name="second"/>
     <input type="submit" value="Submit"/>
+
+    <p><button onclick="geoFindMe()">Show my location</button></p>
+    <div id="out"></div>
 </form>
 </body>
 </html>
