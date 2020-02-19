@@ -9,13 +9,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.Map;
 
 @Controller
+@RequestMapping("/")
 public class FirstController {
-    @GetMapping("/hello")
-    public String hello(
-            @RequestParam(value="name", required=false, defaultValue="World") String name,
-            Model model
-    ) {
-        model.addAttribute("name", name);
+    @GetMapping
+    public String home(@RequestParam(required = false, defaultValue = "Hello") String message, Model model) {
+        model.addAttribute("name", message);
         return "hello";
     }
 }

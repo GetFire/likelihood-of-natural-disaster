@@ -7,6 +7,7 @@
 </head>
 <body>
 <h2 class="hello-title">Hello ${name}!</h2>
+<a href="/geo">Get forecast</a>
 <script src="/js/main.js"></script>
 </body>
 </html>
