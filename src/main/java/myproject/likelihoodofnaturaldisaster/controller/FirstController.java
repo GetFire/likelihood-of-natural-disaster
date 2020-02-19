@@ -5,12 +5,9 @@ import com.eclipsesource.json.JsonObject;
 import com.github.dvdme.ForecastIOLib.FIODaily;
 import com.github.dvdme.ForecastIOLib.FIODataPoint;
 import com.github.dvdme.ForecastIOLib.ForecastIO;
-import myproject.likelihoodofnaturaldisaster.dto.GeoForm;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -25,7 +22,7 @@ public class FirstController {
     @GetMapping
     public String home(@RequestParam(required = false, defaultValue = "Hello")String message, Model model) {
         model.addAttribute("name", message);
-        return "hello";
+        return "homePage";
     }
 
     @RequestMapping("/home")

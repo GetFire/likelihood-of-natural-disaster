@@ -39,6 +39,29 @@
 </c:if>
 
 
+<div>
+    ${forecast}
+<%--    <div>${forecast.getTimezone}</div>--%>
+    <div>${forecast.timezone}</div>
+        <div>${forecast.time}</div>
+        <div>${forecast.icon}</div>
+        <div>${forecast.summary}</div>
+        <div>${forecast.sunriseTime}</div>
+        <div>${forecast.sunsetTime}</div>
+        <div>${forecast.temperatureMinTime}</div>
+        <div>${forecast.temperatureMaxTime}</div>
+        <div>${forecast.precipType}</div>
+        <div>${forecast.apparentTemperatureMinTime}</div>
+        <div>${forecast.apparentTemperatureMaxTime}</div>
+        <div>${forecast.precipIntensity}</div>
+        <div>${forecast.cloudCover}</div>
+        <div>${forecast.humidity}</div>
+        <div>${forecast.nearestStormDistance}</div>
+        <div>${forecast.precipAccumulation}</div>
+        <div>${forecast.pressure}</div>
+        <div>${forecast.visibility}</div>
+        <div>${forecast.windSpeed}</div>
+</div>
 
 
 <%--<button onclick="getGetAndSubmitForm()">get geo</button>--%>
