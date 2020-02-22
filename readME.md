@@ -1,1 +1,2 @@
-[![Build Status](https://travis-ci.org/GetFire/likelihood-of-natural-disaster.svg?branch=master)](https://travis-ci.org/GetFire/likelihood-of-natural-disaster)
+[![Build Status](https://travis-ci.org/GetFire/likelihood-of-natural-disaster.svg?branch=master)](https://travis-ci.org/GetFire/likelihood-of-natural-disaster) 
+[![codecov](https://codecov.io/gh/GetFire/likelihood-of-natural-disaster/branch/master/graph/badge.svg)](https://codecov.io/gh/GetFire/likelihood-of-natural-disaster)
