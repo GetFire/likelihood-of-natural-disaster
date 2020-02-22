@@ -5,7 +5,7 @@ addons:
   sonarcloud:
     organization: "getfire"
     token:
-      secure: "d6dBapQZdeiHAM6rTWZ+6j8GJnejMYjOfr4csgV9JJsSO8964TBIGrjIjok/vsPHTQd22/gKX7Z7n0niZcNb+Q7jEdriRpee7zjlRCMYCgeN7/BzUtIG4ph2adccM9UrMgUx3dm2IhU5aQkGf1BsIQRviZWvsEH17N4AkQHb8qyXpWZZcgVbYBFfHLPBVyAcccERkJSeyK5l+ReOCUm2Cxg1A8o1HnrozlnTD99annGAh3Axd0ETkXJF0SA+evu7vK+SlWYqI2ltEMBgIz0afUe/QO88CqegMzEmpLqXB3YWMYXi92YIWWZugyMGK+Q3bleKSjBzrvT+9cwA5xe1FDvyISsXPNKU2EJ81dmvom7pDIRCShM3YD4xRRO/9Ifsn0fftZFa2NAYSTCguNolrLStK7+DWW7IvFVXwa46BoFhvcZiNpCsXCyJvtbSy2B31enGP1JBdLoeQ4hGonVN5HYuL5bJ2ogioJcfjvbwyAta8Gfz3uQ748soWbL6/UE7KjVF7IxEu8EvR7nFtjMMXRWeclELps4+ovyUGkYB5H7XWTXnpsyi7kcNNS62ZXaD4OMUTtV35T5BIfZydyjalBMQndzLZZRgNGTYQEz/z6AYDREpJUSYVrmVWRsKWdfdkNQSeKayvKgh+uG+nNCBCRI3gnkqRQELRakGaNPbv1U="
+      secure: "$SONAR_TOKEN"
 #jdk:
 #  - oraclejdk8
 script:
