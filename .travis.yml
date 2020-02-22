@@ -3,13 +3,16 @@ sudo: false
 install: true
 addons:
   sonarcloud:
-    organization: "getfire"
+    organization: getfire
     token:
       secure: "$SONAR_TOKEN"
-
 script:
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=GetFire_likelihood-of-natural-disaster
+- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=GetFire_likelihood-of-natural-disaster
 cache:
   directories:
-    - '$HOME/.m2/repository'
-    - '$HOME/.sonar/cache'
+  - "$HOME/.m2/repository"
+  - "$HOME/.sonar/cache"
+
+notifications:
+  slack:
+    secure: KmzsSbF8cjwGxGvm9oPhXunWf4KTS+idJu3yG6RtXt9Pvx53xKie7TEjs1OTTpd99vhfkeBGxlZNBLpQawqsFPH4n/EmNsqv0cuF+ATndqFpQx6bONMYOQj3VH6BWm3jTR4FV84cy5+/RrWQnw+wQlJV6mhoXqpkJ3caEXm5qCTKATX8LZRo7uG4gnthQOWmITGhIP8au4vvqYfLkycifEFqYvUP99h+/VHRMatCUjVuxreJQq2jC2G5zJ7DbDKJs9kYbdZykzm3ZVu/JqRWq8JM2z3EK3I9n2ivlvJb/QyPLu+JuaNNdEv9fW4M29YL4RIo2xl+D6V1MuLZBZhWbTWalXaL/b5TeOEpgliTI2oU4MklVDuwO0z1+lVgpF5YPI5+uIxojeNUmDCtMK+7VkOaqi12jzcYctHilvLoFOroJBtXqAAe099KCf3sgSJwktK8kOOdMzVok1u0wvTzu89qAcJltY3aLBt8kBMABaV1faskZeXtZjWEi4dVIbwrzN5JpJh7rmY5mGRKDsLe332tgKqfERhNQ7iqy7+75tx7O7RuyyqJfY0ALXd+mHm6qgm/as1DZAdDRXIMbnaI1E/88jmOBi8pKpWRlg1hzh7x7FJsRFM6UeoICYvsP3xRNVLLoVKfk1S4N/Tx5T5rFEAYVB6vZGQ2Y1FBAh4zRqw=
