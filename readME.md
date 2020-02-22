@@ -1,0 +1,1 @@
+[![Build Status](https://travis-ci.org/GetFire/likelihood-of-natural-disaster.svg?branch=master)](https://travis-ci.org/GetFire/likelihood-of-natural-disaster)
