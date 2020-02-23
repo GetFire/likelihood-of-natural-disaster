@@ -8,16 +8,21 @@ addons:
       secure: "$SONAR_TOKEN"
 script:
 - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
-#- sonar-scaner
-
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
-
+- bash <(curl -s https://codecov.io/bash)
 cache:
   directories:
   - "$HOME/.m2/repository"
   - "$HOME/.sonar/cache"
-
 notifications:
   slack:
     secure: KmzsSbF8cjwGxGvm9oPhXunWf4KTS+idJu3yG6RtXt9Pvx53xKie7TEjs1OTTpd99vhfkeBGxlZNBLpQawqsFPH4n/EmNsqv0cuF+ATndqFpQx6bONMYOQj3VH6BWm3jTR4FV84cy5+/RrWQnw+wQlJV6mhoXqpkJ3caEXm5qCTKATX8LZRo7uG4gnthQOWmITGhIP8au4vvqYfLkycifEFqYvUP99h+/VHRMatCUjVuxreJQq2jC2G5zJ7DbDKJs9kYbdZykzm3ZVu/JqRWq8JM2z3EK3I9n2ivlvJb/QyPLu+JuaNNdEv9fW4M29YL4RIo2xl+D6V1MuLZBZhWbTWalXaL/b5TeOEpgliTI2oU4MklVDuwO0z1+lVgpF5YPI5+uIxojeNUmDCtMK+7VkOaqi12jzcYctHilvLoFOroJBtXqAAe099KCf3sgSJwktK8kOOdMzVok1u0wvTzu89qAcJltY3aLBt8kBMABaV1faskZeXtZjWEi4dVIbwrzN5JpJh7rmY5mGRKDsLe332tgKqfERhNQ7iqy7+75tx7O7RuyyqJfY0ALXd+mHm6qgm/as1DZAdDRXIMbnaI1E/88jmOBi8pKpWRlg1hzh7x7FJsRFM6UeoICYvsP3xRNVLLoVKfk1S4N/Tx5T5rFEAYVB6vZGQ2Y1FBAh4zRqw=
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: hkOeNa4edTXSdmzfNbTAvUtS6r6zxpgwKYr5D+ksK1syf4NQoqVkGDW0nm+5rMJ952eGsODsxukMP0zsx2zXeM3r1/LJCYNqFqMtdJYF6O86Toqtpfq9jNbNbxf97cljYO8nMMQ8p9EO7wNeU05Vnxhrm4U6764dTgcIUZY6oGrSCwAKnKQQOPTlbD8GOjUC72V78HhOUD+86PSncFOQ0yNhECTDtXvJS6OpMxg+IfNMldbazav35DehSved00GUolnkshlXI/JSDZPrfvKYmxFkco9z5is+rVfCKIaRV9xj8PmutPGlkM0k7z8NMbVvh9NHrcQzYviMpkffMX+og3toHTVni0EnwvyNCDeLDpe8PPzoOxkof7abYS3wx9MSTw3FGTsF35pOR/fhpgPuKoiFxien7ui2F7eRxJRIHb3u2wjmLxEq7+nS6VluTxX5iXM15FGHBaVRNOAT9+pxtRNnDvUCcKqXOJBl/2Ir1+ZeSoXHviCkdpL1T3gMIAVAYLorTeV5c7cXN/tGs2meim7Jpg9qr47lFct93pJhcOh3oFLj8V1eoLMfgZJiHoCParizPRO54o/gaT+NftufG19zuWi75H4KfkWgGua32Edxb0cQ1IDPxC0XQqP6B4w24H/n3DATo3WDZTcdL3iIWVDtiatTKfnulReoSEeaZtY=
+  app: likelihood-of-natural-disaster
+  on:
+    branch: master
+#    repo: GetFire/likelihood-of-natural-disaster
