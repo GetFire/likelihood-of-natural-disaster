@@ -2,15 +2,22 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="city" tagdir="/WEB-INF/tags/city" %>
+<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
+
 
 <html>
 <head>
     <title>City page</title>
+
+    <link href="${contextPath}/resources/css/bootstrap.css" rel="stylesheet">
 </head>
 <body>
 
 <h1>
-    <button onclick="getGetAndSubmitForm()">Get your forecast</button>
+    <div class="col-md-4 text-center">
+        <button type="button" class="btn btn-info btn-lg" onclick="getGetAndSubmitForm()">Get your forecast</button>
+    </div>
 </h1>
 
 <form:form action="/cityApi" modelAttribute="geoForm" method="post" id="geoForm">
@@ -18,24 +25,10 @@
     <form:input id="longitude" path="longitude" type="hidden" value="${geoForm.longitude}"/>
 </form:form>
 
-<c:if test="${not empty city}">
-    <div>
-            ${city}
-<%--                    <div><spring:message code="timezone" arguments="${city.continentCode}"/> </div>--%>
-<%--                    <div><spring:message code="time" arguments="${forecast.time}"/> </div>--%>
-<%--                    <div><spring:message code="icon" arguments="${forecast.icon}"/> </div>--%>
-<%--                    <div><spring:message code="summary" arguments="${forecast.summary}"/> </div>--%>
-<%--                    <div><spring:message code="city" arguments="${forecast.city}"/> </div>--%>
-                    <div>${city.continentCode}</div>
-                    <div>${city.countryCode}</div>
-                    <div>${city.countryName}</div>
-                    <div>${city.locality}</div>
-                    <div>${city.principalSubdivision}</div>
-                    <div>${city.localityLanguageRequested}</div>
-                    <div>${city.longitude}</div>
-                    <div>${city.latitude}</div>
-    </div>
-</c:if>
+<div class="container">
+    <city:city city="${city}"/>
+</div>
+
 
 <script>
     var x = document.getElementById("demo");

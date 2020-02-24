@@ -10,7 +10,6 @@ public class LocalityInfoDto implements Serializable {
     private List<LocalityPropertyDto> administrative;
     private List<LocalityPropertyDto> informative;
 
-
     public List<LocalityPropertyDto> getAdministrative() {
         return administrative;
     }
