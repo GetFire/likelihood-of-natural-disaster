@@ -13,6 +13,7 @@ public class AlexeyForecastDto {
     private String precipType;
     private String apparentTemperatureMinTime;
     private String apparentTemperatureMaxTime;
+    private String city;
     private Double precipIntensity;
     private Double cloudCover;
     private Double humidity;
@@ -22,6 +23,13 @@ public class AlexeyForecastDto {
     private Double visibility;
     private Double windSpeed;
 
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
 
     public String getTime() {
         return time;

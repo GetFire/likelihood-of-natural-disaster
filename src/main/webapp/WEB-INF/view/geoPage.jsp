@@ -31,6 +31,7 @@
         <div><spring:message code="time" arguments="${forecast.time}"/> </div>
         <div><spring:message code="icon" arguments="${forecast.icon}"/> </div>
         <div><spring:message code="summary" arguments="${forecast.summary}"/> </div>
+        <div><spring:message code="city" arguments="${forecast.city}"/> </div>
         <div>${forecast.cloudCover}</div>
         <div>${forecast.humidity}</div>
         <div>${forecast.nearestStormDistance}</div>
