@@ -14,6 +14,8 @@ public class FirstController {
     @GetMapping
     public String home(@RequestParam(required = false, defaultValue = "Hello") String message, Model model) {
         model.addAttribute("name", message);
+
         return "hello";
     }
+
 }

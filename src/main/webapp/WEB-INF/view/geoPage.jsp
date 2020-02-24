@@ -61,6 +61,28 @@
     <div>${forecast.pressure}</div>
     <div>${forecast.visibility}</div>
     <div>${forecast.windSpeed}</div>
+        <div>${city.latitude()}</div>
+        <div>${city.longitude()}</div>
+        <div>${city.coordinates()}</div>
+        <div>${city.hasAltitude()}</div>
+        <div>${city.toString()}</div>
+<%--        <div>${city2.cancelBatchCall()}</div>--%>
+<%--        <div>${city2.cancelCall()}</div>--%>
+<%--        <div>${city2.callFactory}</div>--%>
+
+
+    <%--    <div>${city.toJson()}</div>--%>
+<%--        <div>${city.altitude()}</div>--%>
+<%--        <div>${city.coordinates()}</div>--%>
+<%--        <div>${city.type()}</div>--%>
+<%--        <div>${city2.}</div>--%>
+
+<%--        <div>${city2}</div>--%>
+
+
+
+
+
 </div>
 
 

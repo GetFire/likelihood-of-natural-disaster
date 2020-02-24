@@ -94,8 +94,40 @@
             <version>3.15.0</version>
             <scope>test</scope>
         </dependency>
-
 <!--        UNIT TEST - END -->
+
+
+        <!-- mapbox -->
+        <dependency>
+            <groupId>com.mapbox.mapboxsdk</groupId>
+            <artifactId>mapbox-sdk-services</artifactId>
+            <version>4.8.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.mapbox.mapboxsdk</groupId>
+            <artifactId>mapbox-sdk-turf</artifactId>
+            <version>5.0.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.mapbox.mapboxsdk/mapbox-java-geojson -->
+        <dependency>
+            <groupId>com.mapbox.mapboxsdk</groupId>
+            <artifactId>mapbox-java-geojson</artifactId>
+            <version>2.2.10</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.mapbox.mapboxsdk/mapbox-sdk-core -->
+        <dependency>
+            <groupId>com.mapbox.mapboxsdk</groupId>
+            <artifactId>mapbox-sdk-core</artifactId>
+            <version>5.0.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.mapbox.mapboxsdk/mapbox-java-services -->
+        <dependency>
+            <groupId>com.mapbox.mapboxsdk</groupId>
+            <artifactId>mapbox-java-services</artifactId>
+            <version>2.2.10</version>
+        </dependency>
+
+
 
     </dependencies>
 
