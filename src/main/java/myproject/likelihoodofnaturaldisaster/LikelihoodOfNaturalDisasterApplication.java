@@ -2,9 +2,8 @@ package myproject.likelihoodofnaturaldisaster;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
+import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -13,11 +12,6 @@ import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 
 @SpringBootApplication
 public class LikelihoodOfNaturalDisasterApplication implements WebMvcConfigurer {
-
-//    @Override
-//    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-//        return application.sources(LikelihoodOfNaturalDisasterApplication.class);
-//    }
 
     @Bean
     public LocaleResolver localeResolver() {
@@ -28,6 +22,11 @@ public class LikelihoodOfNaturalDisasterApplication implements WebMvcConfigurer 
         LocaleChangeInterceptor localeInterceptor = new LocaleChangeInterceptor();
         localeInterceptor.setParamName("lang");
         return localeInterceptor;
+    }
+
+    @Bean
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
     }
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
