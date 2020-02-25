@@ -24,7 +24,7 @@ public class GeoController {
 
     private static final String GEO_PAGE = "geoPage";
 
-    @Value("${321454184d08ad9ad1910cf541bab553}")
+    @Value("${forecast.api.key}")
     private String API_KEY ;
 
     @ModelAttribute("geoForm")
