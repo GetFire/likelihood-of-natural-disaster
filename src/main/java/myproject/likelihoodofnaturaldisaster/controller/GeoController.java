@@ -7,6 +7,7 @@ import myproject.likelihoodofnaturaldisaster.dto.AlexeyForecastDto;
 import myproject.likelihoodofnaturaldisaster.dto.GeoForm;
 import myproject.likelihoodofnaturaldisaster.mapper.AlexeyDtoMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,9 +22,10 @@ public class GeoController {
     @Autowired
     private AlexeyDtoMapper mapper;
 
-
     private static final String GEO_PAGE = "geoPage";
-    public static final String API_KEY = "321454184d08ad9ad1910cf541bab553";
+
+    @Value("${321454184d08ad9ad1910cf541bab553}")
+    private String API_KEY ;
 
     @ModelAttribute("geoForm")
     public GeoForm getGeoForm() {
