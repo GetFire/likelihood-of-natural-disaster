@@ -11,7 +11,7 @@ import java.util.List;
 public class ResultWeatherImpl implements ResultWeatherService {
     @Autowired
     private ResultWeatherRepo resultWeatherRepo;
-    private ResultWeatherRepository resultWeatherRepository;
+
 
     @Override
     public ResultWeather addWeatherResult(ResultWeather resultWeather) {
@@ -21,7 +21,7 @@ public class ResultWeatherImpl implements ResultWeatherService {
 
     @Override
     public void delete(int id) {
-//        resultWeatherRepo.delete();
+//        resultWeatherRepo.delete(id);
 
     }
 

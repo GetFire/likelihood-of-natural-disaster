@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.Query;
 
 public interface ResultWeatherRepo extends JpaRepository<ResultWeather,Integer> {
 
-    @Query(value = "SELECT * FROM RESULT_WEATHER ")
+//    @Query(value = "SELECT * FROM RESULT_WEATHER ")
 }
