@@ -5,7 +5,10 @@ import com.github.dvdme.ForecastIOLib.FIODataPoint;
 import com.github.dvdme.ForecastIOLib.ForecastIO;
 import myproject.likelihoodofnaturaldisaster.dto.ForecastDto;
 import myproject.likelihoodofnaturaldisaster.dto.GeoForm;
+import myproject.likelihoodofnaturaldisaster.entity.ResultWeather;
 import myproject.likelihoodofnaturaldisaster.mapper.AlexeyDtoMapper;
+import myproject.likelihoodofnaturaldisaster.mapper.ResultWeatherMapper;
+import myproject.likelihoodofnaturaldisaster.repository.ResultWeatherRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -22,10 +25,16 @@ public class GeoController {
     @Autowired
     private AlexeyDtoMapper mapper;
 
+    @Autowired
+    private ResultWeatherRepository resultWeatherRepository;
+
+    @Autowired
+    private ResultWeatherMapper resultWeatherMapper;
+
     private static final String GEO_PAGE = "geoPage";
 
     @Value("${forecast.api.key}")
-    private String API_KEY ;
+    private String API_KEY;
 
     @ModelAttribute("geoForm")
     public GeoForm getGeoForm() {
@@ -48,10 +57,9 @@ public class GeoController {
 
         FIODataPoint today = new FIODaily(fio).getDay(1);
 
-//        AlexeyDtoMapper mapper = Mappers.getMapper(AlexeyDtoMapper.class);
-
         ForecastDto result = mapper.map(today);
-
+        ResultWeather resultWeather = resultWeatherMapper.map(result, geoForm);
+        resultWeatherRepository.save(resultWeather);
         model.addAttribute("forecast", result);
 
         return "geoPage";
