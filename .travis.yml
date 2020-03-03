@@ -4,8 +4,7 @@ install: true
 addons:
   sonarcloud:
     organization: getfire
-    token:
-      secure: "$SONAR_TOKEN"
+    token: "$SONAR_TOKEN"
 script:
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install
   - sonar-scanner
