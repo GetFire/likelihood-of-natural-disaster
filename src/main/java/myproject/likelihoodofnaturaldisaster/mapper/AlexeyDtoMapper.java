@@ -1,7 +1,7 @@
 package myproject.likelihoodofnaturaldisaster.mapper;
 
 import com.github.dvdme.ForecastIOLib.FIODataPoint;
-import myproject.likelihoodofnaturaldisaster.dto.AlexeyForecastDto;
+import myproject.likelihoodofnaturaldisaster.dto.ForecastDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
@@ -28,6 +28,6 @@ public interface AlexeyDtoMapper {
             @Mapping(target = "visibility", expression = "java(s.visibility())"),
             @Mapping(target = "windSpeed", expression = "java(s.windSpeed())"),
     })
-    AlexeyForecastDto map(FIODataPoint s);
+    ForecastDto map(FIODataPoint s);
 }
 
