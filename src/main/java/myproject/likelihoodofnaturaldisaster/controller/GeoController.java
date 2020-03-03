@@ -3,7 +3,7 @@ package myproject.likelihoodofnaturaldisaster.controller;
 import com.github.dvdme.ForecastIOLib.FIODaily;
 import com.github.dvdme.ForecastIOLib.FIODataPoint;
 import com.github.dvdme.ForecastIOLib.ForecastIO;
-import myproject.likelihoodofnaturaldisaster.dto.AlexeyForecastDto;
+import myproject.likelihoodofnaturaldisaster.dto.ForecastDto;
 import myproject.likelihoodofnaturaldisaster.dto.GeoForm;
 import myproject.likelihoodofnaturaldisaster.mapper.AlexeyDtoMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,7 +50,7 @@ public class GeoController {
 
 //        AlexeyDtoMapper mapper = Mappers.getMapper(AlexeyDtoMapper.class);
 
-        AlexeyForecastDto result = mapper.map(today);
+        ForecastDto result = mapper.map(today);
 
         model.addAttribute("forecast", result);
 

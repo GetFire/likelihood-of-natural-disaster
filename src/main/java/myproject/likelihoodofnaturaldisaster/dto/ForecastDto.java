@@ -1,6 +1,6 @@
 package myproject.likelihoodofnaturaldisaster.dto;
 
-public class AlexeyForecastDto {
+public class ForecastDto {
 
     private String time;
     private String summary;
